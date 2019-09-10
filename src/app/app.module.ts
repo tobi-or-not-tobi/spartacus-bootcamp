@@ -65,6 +65,25 @@ import { AppComponent } from './app.component';
     // BootcampLayoutConfigModule,
 
     // BootcampComponentModule,
+
+    // demonstrate rect/vue/svelte cms web components
+    // ConfigModule.withConfig({
+    //   cmsComponents: {
+    //     BreadcrumbComponent: {
+    //       component: 'assets/breadcrumbs.js#breadcrumbs-cmp',
+    //     },
+    //     CMSParagraphComponent: {
+    //       component: 'assets/cms-data.js#cms-data'
+    //     },
+    //     SearchBoxComponent: {
+    //       component: 'assets/svelte-search-box.js#svelte-search'
+    //     },
+    //     CategoryNavigationComponent: {
+    //       component: 'assets/vue-search-box.min.js#vue-search-box'
+    //     },
+    //   }
+    // }),
+
   ],
   providers: [],
   bootstrap: [AppComponent],
