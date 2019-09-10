@@ -21,7 +21,7 @@ export class WishListAddToCartComponent {
   productCode$: Observable<
     string
   > = this.currentProductService.getProduct().pipe(
-    filter(Boolean),
+    filter(p => !p),
     map(product => product.code)
   );
 

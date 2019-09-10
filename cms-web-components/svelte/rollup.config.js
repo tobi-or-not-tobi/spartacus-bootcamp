@@ -12,7 +12,7 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'public/svelte-search-box.js'
+		file: '../../src/assets/svelte-components/svelte-search-box.js'
 	},
 	plugins: [
 		svelte({
