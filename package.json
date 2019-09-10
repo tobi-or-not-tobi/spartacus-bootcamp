@@ -12,7 +12,9 @@
     "serve:ssr": "node dist/server.js",
     "build:client-and-server-bundles": "ng build --prod && ng run spartacus-bootcamp:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
-    "build:react-components": "cd react-cms-components && yarn && yarn build"
+    "build:react-components": "cd cms-web-components/react && yarn && yarn build",
+    "build:svelte-components": "cd cms-web-components/svelte && npm install && npm run build",
+    "build:vue-components": "cd cms-web-components/vue && yarn && yarn build"
   },
   "private": true,
   "dependencies": {
