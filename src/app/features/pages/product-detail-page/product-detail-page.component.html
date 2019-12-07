@@ -1,0 +1,7 @@
+<p>custom UI for {{ (product$ | async)?.name }}</p>
+
+<!-- reuse product page related components -->
+<cx-product-intro></cx-product-intro>
+
+<!-- render compomponents by slot-->
+<cx-page-slot position="Tabs"></cx-page-slot>

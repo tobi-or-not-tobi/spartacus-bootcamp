@@ -5,11 +5,16 @@ import { ConfigModule } from '@spartacus/core';
 import { B2cStorefrontModule } from '@spartacus/storefront';
 import { environment } from 'src/environments/environment';
 import { AppComponent } from './app.component';
+import { ProductDetailPageModule } from './features/pages/product-detail-page/product-detail-page.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'spartacus-app' }),
+
+    // this module must be introduced before the B2cStorefrontModule
+    ProductDetailPageModule,
+
     B2cStorefrontModule.withConfig({
       backend: {
         occ: {
@@ -33,42 +38,6 @@ import { AppComponent } from './app.component';
         anonymousConsents: true,
       },
     }),
-
-    // CustomBannerModule,
-
-    // BootcampWebComponentModule,
-
-    // BootcampRoutingModule,
-
-    // // Module to configure the site context with multi-site features
-    // BootcampMultiSiteModule,
-    // // Demonstrate a custom context
-    // CatalogContextModule,
-
-    // BootcampSeoModule,
-
-    // BootcampStateModule,
-
-    // BootcampDataBindingModule,
-
-    // Demonstrate static CMS config
-    // BootcampStaticCmsModule,
-
-    // BootcampConfigModule,
-    // // Provide a custom them to the `ThemeConfig`.
-    // ConfigModule.withConfig({ theme: Theme.STRAWBERRIES } as ThemeConfig),
-
-    // // Demonstrate outlets. Don't forget to enable the `<app-outlets></app-outlets>` in the app.component.html
-    // BootcampOutletModule,
-
-    // BootcampIconModule,
-
-    // BootcampI18nModule,
-
-    // demonstrates layout configuration
-    // BootcampLayoutConfigModule,
-
-    // BootcampComponentModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
