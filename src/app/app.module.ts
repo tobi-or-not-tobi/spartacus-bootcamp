@@ -28,6 +28,10 @@ import { AppComponent } from './app.component';
         chunks: translationChunksConfig,
         fallbackLang: 'en',
       },
+      features: {
+        level: '1.3',
+        anonymousConsents: true,
+      },
     }),
 
     // CustomBannerModule,
