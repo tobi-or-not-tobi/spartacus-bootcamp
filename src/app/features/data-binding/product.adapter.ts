@@ -8,7 +8,9 @@ import {
 } from '@spartacus/core';
 import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class BestbuyProductAdapter implements ProductAdapter {
   constructor(
     protected http: HttpClient,

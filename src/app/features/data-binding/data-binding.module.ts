@@ -7,11 +7,11 @@ import { BestbuyProductNormalizer } from './product.converter';
   providers: [
     {
       provide: ProductAdapter,
-      useClass: BestbuyProductAdapter,
+      useExisting: BestbuyProductAdapter,
     },
     {
       provide: PRODUCT_NORMALIZER,
-      useClass: BestbuyProductNormalizer,
+      useExisting: BestbuyProductNormalizer,
       multi: true,
     },
   ],

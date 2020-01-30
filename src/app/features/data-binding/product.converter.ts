@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Converter, Occ, Product } from '@spartacus/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class BestbuyProductNormalizer
   implements Converter<Occ.Product, Product> {
   convert(source: any, target?: any): Product {
